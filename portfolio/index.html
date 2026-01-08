@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baskar P | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+/* Navbar */
+header{
+    background:#020617;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:#e5e7eb;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Sections */
+section{
+    padding:70px 10%;
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Home */
+#home{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#home h1 span{
+    color:#38bdf8;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#020617;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Skills */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.skill-card{
+    background:#020617;
+    padding:15px;
+    border-radius:8px;
+}
+
+/* Projects */
+.project{
+    background:#020617;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer{
+    background:#020617;
+    padding:20px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <h2>Baskar P</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<section id="home" class="show">
+    <h1>Hi, I'm <span>Baskar P</span></h1>
+    <h2>Software Engineer | Full Stack Developer</h2>
+    <p>AI/ML • Data Engineering • Flutter • Python</p>
+    <a href="#projects" class="btn">View Projects</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate Software Engineer and Full Stack Developer with strong
+        interest in AI/ML, Data Engineering, Flutter, and Python development.
+        I enjoy building scalable applications and learning modern technologies.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Core</h3>
+            <p>Software Engineering<br>Full Stack Development</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Languages</h3>
+            <p>Python<br>Java<br>JavaScript<br>Dart (Flutter)</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Frontend</h3>
+            <p>HTML<br>CSS<br>JavaScript<br>Flutter</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Backend</h3>
+            <p>Python<br>Java</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Data & AI</h3>
+            <p>SQL / MySQL<br>Data Engineering Basics<br>ML Fundamentals</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Tools</h3>
+            <p>Git<br>GitHub<br>VS Code<br>XAMPP</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Full Stack Web Application</h3>
+        <p>Developed a responsive web application with backend integration.</p>
+        <small>HTML • CSS • JavaScript • Python</small>
+    </div>
+
+    <div class="project">
+        <h3>AI / ML Prediction Model</h3>
+        <p>Machine learning model for data prediction and analysis.</p>
+        <small>Python • Machine Learning</small>
+    </div>
+
+    <div class="project">
+        <h3>Data Engineering ETL Pipeline</h3>
+        <p>Built ETL pipeline to process and store structured data.</p>
+        <small>Python • SQL</small>
+    </div>
+
+    <div class="project">
+        <h3>Flutter Mobile App</h3>
+        <p>Cross-platform mobile application with clean UI.</p>
+        <small>Flutter • Dart</small>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <p>GitHub: github.com/yourusername</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
+<footer>
+    <p>© 2026 Baskar P | All Rights Reserved</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+    sections.forEach(sec=>{
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 500;
+        if(top > offset){
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
